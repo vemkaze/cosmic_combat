@@ -9,7 +9,8 @@ class CosmicCombat:
         pygame.init()
 
         self.screen = pygame.display.set_mode((1200,800))
-        pygame.display.set_caption("Alien Invasion")
+        pygame.display.set_caption("Cosmic Combat")
+        self.clock = pygame.time.Clock()
 
     def run_game(self):
 
@@ -21,7 +22,8 @@ class CosmicCombat:
                     sys.exit()
             
             pygame.display.flip()
+            self.clock.tick(60)
 
 if __name__ == '__main__':
-    ai = AlienInvasion()
+    ai = CosmicCombat()
     ai.run_game()
