@@ -11,6 +11,7 @@ class CosmicCombat:
         self.screen = pygame.display.set_mode((1200,800))
         pygame.display.set_caption("Cosmic Combat")
         self.clock = pygame.time.Clock()
+        self.bg_color = (230,230,230)
 
     def run_game(self):
 
