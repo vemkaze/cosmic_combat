@@ -11,7 +11,7 @@ class CosmicCombat:
         self.screen = pygame.display.set_mode((1200,800))
         pygame.display.set_caption("Cosmic Combat")
         self.clock = pygame.time.Clock()
-        self.bg_color = (230,230,230)
+        self.bg_color = (179, 179, 255)
 
     def run_game(self):
 
@@ -21,7 +21,8 @@ class CosmicCombat:
 
                 if event.type == pygame.QUIT:
                     sys.exit()
-            
+
+            self.screen.fill(self.bg_color)
             pygame.display.flip()
             self.clock.tick(60)
 
