@@ -2,6 +2,9 @@ import sys
 
 import pygame
 
+from settings import Settings
+
+
 class CosmicCombat:
 
     def __init__(self):
@@ -12,6 +15,8 @@ class CosmicCombat:
         pygame.display.set_caption("Cosmic Combat")
         self.clock = pygame.time.Clock()
         self.bg_color = (179, 179, 255)
+        self.settings = Settings()
+        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
 
     def run_game(self):
 
@@ -27,5 +32,5 @@ class CosmicCombat:
             self.clock.tick(60)
 
 if __name__ == '__main__':
-    ai = CosmicCombat()
-    ai.run_game()
+    cc = CosmicCombat()
+    cc.run_game()
